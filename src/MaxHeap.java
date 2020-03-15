@@ -5,6 +5,8 @@ public class MaxHeap implements Heap {
         data = new Integer[capacity];
         size = 0;
     }
+
+
     // build a heap based on data
     // to be implemented in O(nlogn)
     public void MaxHeapLogN(Integer[] data) {
@@ -104,7 +106,7 @@ public class MaxHeap implements Heap {
         }
         data[size-1] = null;
         size--;
-        heapifyDown(0);
+        restoreHeapProperty();
         return poppedItem;
     }
     @Override
